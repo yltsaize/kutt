@@ -7,7 +7,7 @@ WORKDIR /usr/src/app
 
 # Installing dependencies
 COPY package*.json ./
-RUN npm install
+RUN npx npm-force-resolutions && npm install
 
 # Copying source files
 COPY . .
